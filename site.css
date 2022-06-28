@@ -1,27 +1,4 @@
-* {
-    color: brown;
-}
-h1 {
-    color: purple
-}
-
-p {
-    color: plum
-}
-li {
-    font-size: 20px;
-
-}
-.bekar
-{
-    font-size: 26px;
-    font-weight: bold;
-    
-
-}
-
-#ben {
-    font-style: italic;
-    color: blueviolet;
+[class] {
+    color: red;
 }
  
