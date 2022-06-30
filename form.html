@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <title>Form ve Elemanları</title>
+
+        <link rel="stylesheet" href="formm.css">
+        
+    </head>
+    <body>
+        <!-- 
+        - adı*
+        - telefon*
+        - e-mail*
+        - mesaj
+        - yaşadığı şehir
+        - cinsiyet
+        -->
+
+        <form action="" method="post">
+            <input type="hidden" name="s-500" id="product">
+            <!-- bu input tipi form sayfasında görünmez fakat arka kısımda gitmesini istediğimiz 
+            bilgiler için kullanılır. -->
+
+
+            <div>
+            <label for="adi">Adı</label>
+            <input name="adi" id="adi" type="text" required/>
+        </div>
+
+        <!-- required etiketi o alanın doldurulmasının zorulu olmasını belirler. -->
+
+            <!-- aynı anlama gelen kod
+                <label>Adı  <input type="text" /></label>
+             -->
+
+            <!--Label etiketi form içindeki veri girişi yapılan etiketlerin ne olduğunu tanımlamak 
+                için yerleştirilen kısa tanımlar yaptığınızda anlamlı duran etikettir. Bir özelliği 
+                daha vardır tıklandığında ilgili veri girişi elemanına fokus olmasıdır. Label bir 
+                form etiketi üyesidir. Form içinde kullanılmalıdır.  -->
+
+                <!-- <input /> etiketi form özelliği veri giriş alanının sayfa içindeki hangi forma 
+                ait olduğunu belirtir. -->
+                 
+                <!-- diz bölüm belirtmek için kullanılır. -->
+
+                <div>
+                    <label for="tel">Telefon</label>
+                    <input name="tel" id="tel" type="tel"  required />
+                </div>        
+
+                <div>
+                    <label for="email">Email</label>
+                    <input name="email" id="email" type="email" required />
+                </div>
+
+                <div>
+                    <label for="mesaj">Mesaj</label>
+                    <textarea name="mesaj" id="mesaj" rows="3"></textarea>
+                </div>
+                <!-- mesaj kısmında birden fazla satırlık yazı olacağı için input değil textarea
+                kullandık. textaredaki cols enine sığacak karakteri, rows kısmı satır sayısını
+                 belirler. <textarea id="mesaj" cols="50" rows="3"></textarea> mesaj kısmını önce bu
+                şekilde yazdıktan sonra input ve select için verdiğimiz width değerini textareaya da verince
+                 cols değerine  gerek kalmadığından sildik-->
+
+                <!-- normalde bu formda css kulanmaycağız fakat label display block yaptık ki yanına gelen
+                inputlar alt satıra geçsin -->
+
+                <div>
+                    <label for="sehir">Şehir</label>
+                    <select name="sehir" id="sehir">
+                        <option value="" selected >Sakarya</option>
+                        <option value="" >İstanbul</option>
+                    </select>
+                </div>
+                <!-- seçili olarak sakarya gelmesi için selected ekledik. -->
+
+                <!-- select kullanıcıya birden fazla seçenek sunmaya yarar.
+                option selecte özeldir. select etiketi açtıktan sonra içindeki değerleri option
+            etiketi ile gösteririz.  -->
+
+                <!-- radiobutton kullanıcıya seçenekler arasından birini seçtirmek için kullanılan input elemanı -->
+                    <div>
+                <label for="renk">Sevdiğiniz Renk</label>
+                <input type="radio" name="renk" value="mor" checked >Mor
+                <input type="radio" name="renk" value="pembe" >Pembe
+                <input type="radio" name="renk" value="yesil" >Yeşil
+            </div>
+            <!-- checked etiketi varsayılan olarak seçili olmasını sağlar -->
+            <!-- renk seçiminde sadece bir rengin seçili olması için radio kısmında name alanına
+            hepsine aynı ismi verdik -> renk -->
+
+            <div class="buttons">
+                <button type="reset">Sıfırla</button>
+                <button type="submit">Gönder</button>
+            </div>
+
+            <!-- buradaki sıfırla butonu forma değer girildikten sonra basıldığında formun ilk haline
+            geri döndürür . mesela biz baştaki adı isimli labele value olarak zehra girsek .
+            <div>
+            <label for="adi">Adı</label>
+            <input id="adi" type="text"  value ="zehra "/>
+        </div>
+            zehrayı varsayılan değer olarak gördüğü için sonradan eklenenleri zehra hariç siler 
+            ve ilk haline getirir. -->
+            <!--gönder butonuna tıkladığımızda girilen bilgiler form actiondaki girilen url gönderilir.
+             form actionda method özelliğinin post olması kullanıcıdan alınan bilgilerin girilen url e gönderilmesi
+            işlemidir.-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </form>
+        
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
