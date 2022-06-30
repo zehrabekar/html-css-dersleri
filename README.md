@@ -1,4 +1,6 @@
 # html-css-dersleri
+blog 
+<br>
 
 ![blog1](https://user-images.githubusercontent.com/93613471/176630254-53ac87b7-65e9-4eb3-9afe-79ca381bee2d.png)
 
