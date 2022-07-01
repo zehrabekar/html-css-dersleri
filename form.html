@@ -15,15 +15,15 @@
         - cinsiyet
         -->
 
-        <form action="" method="post">
-            <input type="hidden" name="s-500" id="product">
+        <form action="https://httpbin.org/post" method="post">
+            <input type="hidden" value="s-500" name="product">
             <!-- bu input tipi form sayfasında görünmez fakat arka kısımda gitmesini istediğimiz 
             bilgiler için kullanılır. -->
 
 
-            <div>
+            <div class="form-row">
             <label for="adi">Adı</label>
-            <input name="adi" id="adi" type="text" required/>
+            <input name="adi" id="adi" type="text" required placeholder="Zehra Bekar"/>
         </div>
 
         <!-- required etiketi o alanın doldurulmasının zorulu olmasını belirler. -->
@@ -42,17 +42,17 @@
                  
                 <!-- diz bölüm belirtmek için kullanılır. -->
 
-                <div>
+                <div class="form-row">
                     <label for="tel">Telefon</label>
                     <input name="tel" id="tel" type="tel"  required />
                 </div>        
 
-                <div>
+                <div class="form-row">
                     <label for="email">Email</label>
                     <input name="email" id="email" type="email" required />
                 </div>
 
-                <div>
+                <div class="form-row">
                     <label for="mesaj">Mesaj</label>
                     <textarea name="mesaj" id="mesaj" rows="3"></textarea>
                 </div>
@@ -65,11 +65,11 @@
                 <!-- normalde bu formda css kulanmaycağız fakat label display block yaptık ki yanına gelen
                 inputlar alt satıra geçsin -->
 
-                <div>
+                <div class="form-row">
                     <label for="sehir">Şehir</label>
                     <select name="sehir" id="sehir">
-                        <option value="" selected >Sakarya</option>
-                        <option value="" >İstanbul</option>
+                        <option value="54" selected >Sakarya</option>
+                        <option value="34" >İstanbul</option>
                     </select>
                 </div>
                 <!-- seçili olarak sakarya gelmesi için selected ekledik. -->
@@ -79,17 +79,21 @@
             etiketi ile gösteririz.  -->
 
                 <!-- radiobutton kullanıcıya seçenekler arasından birini seçtirmek için kullanılan input elemanı -->
-                    <div>
-                <label for="renk">Sevdiğiniz Renk</label>
-                <input type="radio" name="renk" value="mor" checked >Mor
-                <input type="radio" name="renk" value="pembe" >Pembe
-                <input type="radio" name="renk" value="yesil" >Yeşil
+                
+                <div class="form-row">
+                <p>Sevdiğiniz Renk</p>
+                <div class="radio-container">
+                <label><input type="radio" name="renk" value="mor" checked >Mor </label>
+                <label><input type="radio" name="renk" value="pembe" >Pembe </label>
+                <label> <input type="radio" name="renk" value="yesil" >Yeşil</label>
             </div>
+            </div>
+
             <!-- checked etiketi varsayılan olarak seçili olmasını sağlar -->
             <!-- renk seçiminde sadece bir rengin seçili olması için radio kısmında name alanına
             hepsine aynı ismi verdik -> renk -->
 
-            <div class="buttons">
+            <div class="form-row">
                 <button type="reset">Sıfırla</button>
                 <button type="submit">Gönder</button>
             </div>
@@ -105,6 +109,29 @@
             <!--gönder butonuna tıkladığımızda girilen bilgiler form actiondaki girilen url gönderilir.
              form actionda method özelliğinin post olması kullanıcıdan alınan bilgilerin girilen url e gönderilmesi
             işlemidir.-->
+
+            <!-- html > body > form > input - kapsama sırası
+            css yazarken bu sıralamada yazmalıyız . html en üstte. body bir altı. onun altında form 
+        ve sonra input-->
+
+        <!-- solid düz çizgi  -->
+        <!-- font-size: inherit; yapmamızın nedeni bir üst kapsayıcının font szie ı neyse sen de onu kullan demek
+         -->
+
+        <!-- select {
+        -webkit-appearance: none;
+        background-image: url("");
+        background-repeat: no-repeat;
+        background-position: right center;
+        } icon eklenecek -->
+
+        <!-- .radio-container  label + label {
+        margin-left: 20px; 
+        ilki hariç sonrakilerin hepsine margin left 20px uygula demek oluyor-->
+
+        <!--  .form-row > label{ form row un altında labellere etki eder -->
+
+
 
 
 
