@@ -10,3 +10,6 @@ blog
 <br>
 form 
 ![form](https://user-images.githubusercontent.com/93613471/176698342-21dda067-5431-421a-805b-e6eb551a7cc4.png)
+<br>
+<br>
+![forma-gonderilen-bilgiler](https://user-images.githubusercontent.com/93613471/176859897-4cc83258-d893-498c-98a9-1d181ea81df1.png)
