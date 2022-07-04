@@ -3,7 +3,6 @@
         <title>Form ve Elemanları</title>
 
         <link rel="stylesheet" href="formm.css">
-        
     </head>
     <body>
         <!-- 
@@ -16,31 +15,32 @@
         -->
 
         <form action="https://httpbin.org/post" method="post">
-            <input type="hidden" value="s-500" name="product">
-            <!-- bu input tipi form sayfasında görünmez fakat arka kısımda gitmesini istediğimiz 
-            bilgiler için kullanılır. -->
+            <!--
+                Html form etiketlerinin görevi, <form> ... </form> etiketleri içinde bulunan html kontrolleri aracılığıyla kullanıcılardan toplanan bilgileri server'a göndermektir.
+                Action özelliği form verilerinin nereye gönderileceğini tanımlar.
+            method = "yöntem"	Formdan girilecek bilgilerin değerlendirici dosyaya gönderilme yöntemi -->
+            <!-- method seçenekleri :
+                
+                -GET: GET yönteminde, form gönderildikten sonra, yeni tarayıcı sekmesinin adres çubuğunda 
+               form değerleri görünecektir. Yaklaşık 3000 karakterle sınırlı bir boyutu vardır. Hassas bilgiler için değil, 
+               yalnızca güvenli olmayan veriler için yararlıdır 
+                -post: kullanıcıdan alınan bilgilerin girilen url e gönderilmesi işlemidir.
+                -dialog : bir iletişim kutusunu veya kapatılabilir uyarı, denetçi veya alt pencere gibi başka bir etkileşimli bileşeni temsil eder. -->
 
+            <input type="hidden" value="s-500" name="product">
+            <!-- bu input tipi form sayfasında görünmez fakat arka kısımda gitmesini istediğimiz bilgiler için kullanılır. -->
 
             <div class="form-row">
+            <!--  Div etiketi genel olarak belirli bir alanı gruplamak için kullanılmaktadır. Kullanıldığı alan belirli bir düzen içinde grupladığınız için düzgün gözükmektedir -->
             <label for="adi">Adı</label>
+            <!-- Label etiketi form içindeki veri girişi yapılan etiketlerin ne olduğunu tanımlamak için yerleştirilen kısa tanımlar yaptığınızda anlamlı duran etikettir. Bir özelliği 
+            daha vardır tıklandığında ilgili veri girişi elemanına fokus olmasıdır. Label bir form etiketi üyesidir. Form içinde kullanılmalıdır. -->
             <input name="adi" id="adi" type="text" required placeholder="Zehra Bekar"/>
         </div>
-
-        <!-- required etiketi o alanın doldurulmasının zorulu olmasını belirler. -->
-
-            <!-- aynı anlama gelen kod
-                <label>Adı  <input type="text" /></label>
-             -->
-
-            <!--Label etiketi form içindeki veri girişi yapılan etiketlerin ne olduğunu tanımlamak 
-                için yerleştirilen kısa tanımlar yaptığınızda anlamlı duran etikettir. Bir özelliği 
-                daha vardır tıklandığında ilgili veri girişi elemanına fokus olmasıdır. Label bir 
-                form etiketi üyesidir. Form içinde kullanılmalıdır.  -->
-
-                <!-- <input /> etiketi form özelliği veri giriş alanının sayfa içindeki hangi forma 
-                ait olduğunu belirtir. -->
-                 
-                <!-- diz bölüm belirtmek için kullanılır. -->
+                <!-- Placeholder özelliği giriş alanın girilmesi düşünülen değer ile ilgili açıklayıcı kısa ipucu belirtir. İpucu giriş alanında görüntülenir ve odaklanıldığında kaybolur veya pasifleşir. -->
+                <!-- required etiketi o alanın doldurulmasının zorulu olmasını belirler. -->
+                <!-- aynı anlama gelen kod = <label> Adı  <input type="text" /></label> -->
+                <!-- <input /> etiketi form özelliği veri giriş alanının sayfa içindeki hangi forma ait olduğunu belirtir. -->
 
                 <div class="form-row">
                     <label for="tel">Telefon</label>
@@ -56,74 +56,57 @@
                     <label for="mesaj">Mesaj</label>
                     <textarea name="mesaj" id="mesaj" rows="3"></textarea>
                 </div>
-                <!-- mesaj kısmında birden fazla satırlık yazı olacağı için input değil textarea
-                kullandık. textaredaki cols enine sığacak karakteri, rows kısmı satır sayısını
-                 belirler. <textarea id="mesaj" cols="50" rows="3"></textarea> mesaj kısmını önce bu
-                şekilde yazdıktan sonra input ve select için verdiğimiz width değerini textareaya da verince
+                <!-- İngilizce “metin alanı” anlamına gelen bu kelime formumuza yazı yazılabilecek alan eklemek için kullanılır. Yardımcı öğeler olarak rows ve cols kullanılır. -->
+                <!-- mesaj kısmında birden fazla satırlık yazı olacağı için input değil textarea kullandık. textaredaki cols enine sığacak karakteri, rows kısmı satır sayısını
+                 belirler.
+                <textarea id="mesaj" cols="50" rows="3"></textarea> mesaj kısmını önce bu şekilde yazdıktan sonra input ve select için verdiğimiz width değerini textareaya da verince
                  cols değerine  gerek kalmadığından sildik-->
 
-                <!-- normalde bu formda css kulanmaycağız fakat label display block yaptık ki yanına gelen
-                inputlar alt satıra geçsin -->
-
-                <div class="form-row">
+                <!-- label display : block yaptık, yanına gelen inputların alt satıra geçmesi için. -->
+                
+                <div class="form-row"> 
                     <label for="sehir">Şehir</label>
                     <select name="sehir" id="sehir">
                         <option value="54" selected >Sakarya</option>
-                        <option value="34" >İstanbul</option>
+                        <option value="34" >İstanbul</option> 
                     </select>
                 </div>
-                <!-- seçili olarak sakarya gelmesi için selected ekledik. -->
-
-                <!-- select kullanıcıya birden fazla seçenek sunmaya yarar.
-                option selecte özeldir. select etiketi açtıktan sonra içindeki değerleri option
-            etiketi ile gösteririz.  -->
-
-                <!-- radiobutton kullanıcıya seçenekler arasından birini seçtirmek için kullanılan input elemanı -->
                 
+                <!-- seçili olarak sakarya gelmesi için selected ekledik. -->
+                <!-- select kullanıcıya birden fazla seçenek sunmaya yarar.
+                option selecte özeldir. select etiketi açtıktan sonra içindeki değerleri option etiketi ile gösteririz.  -->
+
                 <div class="form-row">
                 <p>Sevdiğiniz Renk</p>
                 <div class="radio-container">
                 <label><input type="radio" name="renk" value="mor" checked >Mor </label>
                 <label><input type="radio" name="renk" value="pembe" >Pembe </label>
                 <label> <input type="radio" name="renk" value="yesil" >Yeşil</label>
+                
             </div>
             </div>
-
+            <!-- radiobutton kullanıcıya seçenekler arasından birini seçtirmek için kullanılan input elemanı -->
             <!-- checked etiketi varsayılan olarak seçili olmasını sağlar -->
-            <!-- renk seçiminde sadece bir rengin seçili olması için radio kısmında name alanına
-            hepsine aynı ismi verdik -> renk -->
+            <!-- renk seçiminde sadece bir rengin seçili olması için radio kısmında name alanına hepsine aynı ismi verdik -> name=renk -->
 
             <div class="form-row">
                 <button type="reset">Sıfırla</button>
                 <button type="submit">Gönder</button>
             </div>
-
-            <!-- buradaki sıfırla butonu forma değer girildikten sonra basıldığında formun ilk haline
-            geri döndürür . mesela biz baştaki adı isimli labele value olarak zehra girsek .
+            <!--  Button etiketi, tıklanabilir düğme oluşturur.  -->
+            <!-- buradaki sıfırla butonu forma değer girildikten sonra basıldığında formun ilk haline geri döndürür . mesela biz baştaki adı isimli labele value olarak zehra girsek :
             <div>
             <label for="adi">Adı</label>
-            <input id="adi" type="text"  value ="zehra "/>
-        </div>
-            zehrayı varsayılan değer olarak gördüğü için sonradan eklenenleri zehra hariç siler 
-            ve ilk haline getirir. -->
-            <!--gönder butonuna tıkladığımızda girilen bilgiler form actiondaki girilen url gönderilir.
-             form actionda method özelliğinin post olması kullanıcıdan alınan bilgilerin girilen url e gönderilmesi
-            işlemidir.-->
+            <input id="adi" type="text"  value ="zehra "/> </div>
+            zehrayı varsayılan değer olarak gördüğü için sonradan eklenenleri zehra hariç siler ve ilk haline getirir. -->
+            <!--gönder butonuna tıkladığımızda girilen bilgiler form actiondaki girilen url e gönderilir. form actionda method özelliğinin post olması kullanıcıdan alınan bilgilerin girilen 
+            url e gönderilmesi işlemidir.-->
 
-            <!-- html > body > form > input - kapsama sırası
-            css yazarken bu sıralamada yazmalıyız . html en üstte. body bir altı. onun altında form 
-        ve sonra input-->
+            <!-- html > body > form > input - kapsama sırası bu şekildedir. css yazarken bu sıralamada yazmalıyız . html en üstte. body bir altı. onun altında form ve sonra input-->
+            <!-- solid düz çizgi  -->
+            <!-- font-size: inherit; yapmamızın nedeni bir üst kapsayıcının font size ı neyse sen de onu kullan demek -->
 
-        <!-- solid düz çizgi  -->
-        <!-- font-size: inherit; yapmamızın nedeni bir üst kapsayıcının font szie ı neyse sen de onu kullan demek
-         -->
-
-        <!-- select {
-        -webkit-appearance: none;
-        background-image: url("");
-        background-repeat: no-repeat;
-        background-position: right center;
-        } icon eklenecek -->
+        
 
         <!-- .radio-container  label + label {
         margin-left: 20px; 
@@ -131,36 +114,6 @@
 
         <!--  .form-row > label{ form row un altında labellere etki eder -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </form>
-        
-
-
-
-
-
-
-
-
-
-
     </body>
 </html>
