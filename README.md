@@ -13,3 +13,5 @@ form
 <br>
 <br>
 ![forma-gonderilen-bilgiler](https://user-images.githubusercontent.com/93613471/176859897-4cc83258-d893-498c-98a9-1d181ea81df1.png)
+<br>
+![form2](https://user-images.githubusercontent.com/93613471/176952472-c41a7f83-5cd4-4ad4-87a5-575fe8b0f3a3.png)
