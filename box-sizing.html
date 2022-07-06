@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-sizing</title>
+    <link rel="stylesheet" href="still.css"/>
+ </head>
+ <body>
+    <div id="box1">box1</div>
+    <div id="box2">box2</div>
+    
+    <p>
+        ekranda gördüğümüz her şey kutudur.<br>
+        box model:
+        <br>
+        * content-box : <br>
+        varsayılan box sizing değeridir. bu kutu modelinde :<br>
+        toplam genişlik = bizim verdiğimiz genişlik + padding + border <br>
+        toplam yükseklik = bizim verdiğimiz yükseklik + padding + border<br>
+        örnek olarak box2de width değerine 300 px verdik. daha sonra padding ve border özelliklerini yazdık. daha sonra tarayıcıda sağ tık + incele yaptığımızda toplam genişliğin 350px old. gördük.
+        aynı durum yükseklik için de geçerlidir.kısaca genişlik veya yükseklik değeri padding ve border değerlerini içermez. margin değeri kutu modelini etkilemez<br>
+        <br>
+        <br>
+        * border-box : <br>
+        bu kutu modelinde genişlik bizim verdiğimiz px kadardır. eklenen paddding ve border değerleri genişliği arttırmaz. örnek olarak box1de genişliğe 300 px verdik, daha sonra padding ve border 
+        değerleri ekledik ancak incele yaptığımızda genişliğin hala 300px old. gördük. yani padding ve border değerleri dahil olduğunda toplam genişlik 300px olur. toplam genişlik 300pxin üstüne çıkamaz.
+        kısaca genişlik veya yükseklik değeri padding ve border değerlerini de içerir.margin değeri kutu modelini etkilemez.
+        toplam genişlik = bizim verdiğimiz genişlik
+        <br>
+        eğer projenin her yerinde border-box kullanacaksak stil kısmında böyle yapabiliriz :<br>
+        * { <br>
+            box-sizing : border-box; <br>
+        }
+
+    </p>
+    </body>
+
+
+
+</html>
