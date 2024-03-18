@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* pseudo class kullanımı :
+        selector:pseudo-class    */
+        
+        .link{
+            font-size: 24px;
+        }
+        .link:link{
+            color: green; /* a etiketine henüz tıklanmamışsa rengi yeşil kalır*/
+        }
+        .link:hover{
+            color: red; /*fare ile linkin üzerine geldiğimizde link kırmızı oldu*/
+        }
+        .link:visited{
+            color: black; /* tıklanan link siyah olur*/
+        }
+        .link:active{
+            color: blue; /* a etiketine tıklarken rengi mavi olur, henüz tıklamayı bırakmamışken */
+        }
+
+        input{
+            font-size: 1.5em;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid black;
+        }
+        input:focus{
+            outline: 0; /* inputa tıklanığında oluşan kenarlığı kaldırdık*/
+            border: 2px solid red; /* tıkladığımızda kenarlığı kırmızı oldu*/
+        }
+        .facebook{
+            color: white;
+            font-size: 1.5em;
+            display: inline-block;
+            background-color: blue;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .facebook:hover{
+            background-color: white;
+            color: blue;
+            border: 1px solid blue;
+        }
+        .paragraf1{
+            font-size: 1.5em; /*24px*/
+            letter-spacing: 2px; /*harfler arası boşluk*/
+            line-height: 1.5em; /*satır yüksekliği. font size değerinin 1.5 katı olarak hesaplandı ve 36 px oldu*/
+        }
+        .paragraf1::first-line{
+            color: red; /*ilk satır kırmızı oldu*/
+        }
+        .paragraf1::first-letter{
+            color: blue; /*paragrafın ilk harfi mavi oldu*/
+            font-size: 50px;
+        }
+        .paragraf1::before{
+            content: " paragraf öncesine eklendi ";
+        }
+        .paragraf1::after{
+            content: url("https://w7.pngwing.com/pngs/1002/494/png-transparent-star-star-angle-triangle-logo.png");
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="link">bu bir link</a>
+
+    <input type="text" placeholder="name">
+
+    <a href="#" class="facebook">facebook</a>
+
+    <p class="paragraf1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum esse unde placeat laborum dicta voluptatem dolorem 
+        labore consequuntur culpa totam rerum ducimus voluptates tempora amet iusto provident ipsam praesentium perferendis a eum deserunt 
+        quibusdam dignissimos, molestias velit. Dolor molestiae consequuntur odio quaerat? Autem optio eius cumque deleniti qui illo odit, 
+        modi fugit temporibus reprehenderit. Iste voluptatibus unde explicabo dolore recusandae minima, impedit ratione quia, accusamus neque 
+        alias voluptatum sapiente, quisquam quos nemo eveniet sit at praesentium harum id est deserunt veniam! Voluptates alias quia adipisci 
+        consequatur, quasi voluptatum necessitatibus quos quod vel unde voluptas minima quisquam facilis modi, ducimus saepe!</p>
+
+    <!-- 
+        CSS'de "pseudo-class" (yalancı sınıf), bir HTML öğesinin belirli durumlarında veya belirli etkileşimler gerçekleştiğinde seçilen bir 
+        durumunu temsil eden bir seçicidir. Örneğin, bir bağlantının ziyaret edildiğinde, bir kullanıcının bir öğenin üzerine geldiğinde veya 
+        bir öğe odaklandığında belirli stiller uygulamak için pseudo-class kullanılabilir.
+        Bazı yaygın pseudo-class örnekleri şunlardır:
+
+        :hover - Fare öğenin üzerine geldiğinde
+        :active - Öğe tıklanırken
+        :focus - Bir öğe odaklandığında (genellikle klavye kullanımıyla)
+        :visited - Bir bağlantı ziyaret edildiğinde
+        :first-child - Bir öğenin ilk çocuğu olduğunda
+        :nth-child() - Bir öğenin belirli bir sıradaki çocuğu olduğunda
+        :nth-of-type() - Belirli bir öğe türündeki öğelerin belirli bir sıradaki örneği olduğunda
+     -->
+</body>
+</html>
