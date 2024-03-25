@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       p{
+        font-size: 1.5em;
+       }
+       p:nth-child(3){
+        color: pink;
+       }
+       p:first-child{
+        color: purple;
+       }
+       p:nth-child(even){
+        color: red;
+       }
+       p:nth-child(odd){
+        color: blue;
+       }
+
+       ul{
+        font-size: 1.5em;
+        list-style-type: none;
+       }
+       ul li:nth-child(2n){
+        color: red;
+       }
+       ul li:nth-child(2n+1){
+        color: green;
+       }
+       ul li:nth-child(n+4){
+        background: black;
+       } /*n 0 değeri ile başlar, 1 artarak devam eder. 4. çocuk ve sonrası seçilerek arkaplanı siyah olur*/
+       /*burada n 0dan başlar ve 1 artarak devam eder.b değeri verilmediği için 0dır. çift sayılı cocukları seçmiş oluruz*/
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+    </ul>
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <!-- burada body etiketi altında 5 tane p etiketi var ve body ile p arasında parent-child ilişksi var.
+    biz stil verirken tüm p etiketlerine birden stil vermek istemeyebiliriz. bu durumda :nth-child() kullanarak istediğimiz p etiketine stil
+    verebiliriz. parantez içine yazdığımız rakamla istediğimiz p etiketini seçebiliriz. 
+    :first-child = 1. çocuk, :last-child = sonuncu çocuktur. 
+    :nth-child(even) = çift sayılı çocuklardır.
+    :nth-child(odd) = tek sayılı çocuklardır
+    an + b şeklinde bir formülle de çocuklara ulaşabiliriz. burada n her zaman 0dır, b değerini girmezsek varsayılan olarak b de 0 değerini alır.
+
+     -->
+</body>
+</html>
