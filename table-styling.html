@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,td,th{
+            border: 1px solid black;
+            border-collapse: collapse; /* borderları birleştirir*/
+        }
+        table{
+            width: 75%;
+            margin: 0 auto;
+            font-size: 1.5em;
+        }
+        th,td{
+            padding: 10px;
+        }
+        thead tr{
+            background:rgb(112, 8, 131);
+            color: white;
+        }
+        tbody tr{
+            text-align: center;
+        }
+        tbody tr:nth-child(even){
+            background: #e2afee;
+        }
+        tbody tr:hover{
+            background: rgb(236, 86, 236);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ad</th>
+                <th>departman</th>
+                <th>maaş</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>mustafa</td>
+                <td>bilişim</td>
+                <td>50000</td>
+            </tr>
+            <tr>
+                <td>mustafa</td>
+                <td>bilişim</td>
+                <td>50000</td>
+            </tr> 
+            <tr>
+                <td>mustafa</td>
+                <td>bilişim</td>
+                <td>50000</td>
+            </tr> <tr>
+                <td>mustafa</td>
+                <td>bilişim</td>
+                <td>50000</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
