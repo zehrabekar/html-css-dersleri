@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fixed-topbar{
+            width: 50%;
+            padding: 20px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            position: fixed; /*sayfa scroll edilirken başlık üstte sabit kaldı*/
+            right: 20px; /*başlık sağ taraftan 0 px boşluk kalacak şekilde konumlandı. 
+            bottom : 20px; yazarsak sol alt koşede alttan 20px boşluk kalacak şekilde konumlanacak*/ 
+        }
+        body{
+            height: 1500px; /*sayfa scroll edilebilir hale getirildi*/
+        }
+    </style>
+</head>
+<body>
+    <div class="fixed-topbar">Udemy</div>
+    <!-- Bir HTML öğresinin sayfa içinde nasıl yerleştirileceğini kontrol etmek için kullanılır. Dört farklı değer alır.
+    static :  Bu, öğenin varsayılan davranışıdır. Bu özelliğine sahip bir öğenin konumu, normal belge akışındaki yerine bağlıdır ve top, bottom, 
+    left veya right gibi özelliklere sahip değildir ve bu pozisyon özellikleri ile yer değiştirmez.
+    fixed : Bu, bir öğeyi belirli bir konuma sabitlemek için kullanılır. 
+    relative : 
+    absolute : Bir HTML öğesinin normal belge akışından çıkarılarak, en yakın kapsaycı içinde konumlandırılmasını sağlar. Bu kapsayıcının position
+    özelliği relative, absolute veya fixed olmalıdır. Eğer kapsayıcı bir öğe yoksa body etiketine göre konumlandırılır.
+       -->
+</body>
+</html>
