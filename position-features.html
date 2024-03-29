@@ -6,28 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .fixed-topbar{
+        /* .fixed-topbar{
             width: 50%;
             padding: 20px;
             background-color: black;
             color: white;
             text-align: center;
-            position: fixed; /*sayfa scroll edilirken başlık üstte sabit kaldı*/
-            right: 20px; /*başlık sağ taraftan 0 px boşluk kalacak şekilde konumlandı. 
-            bottom : 20px; yazarsak sol alt koşede alttan 20px boşluk kalacak şekilde konumlanacak*/ 
+            position: fixed; /*sayfa scroll edilirken başlık üstte sabit kaldı
+            right: 20px; /*başlık sağ taraftan 0 px boşluk kalacak şekilde konumlandı.
+            bottom : 20px; yazarsak sol alt koşede alttan 20px boşluk kalacak şekilde konumlanacak
         }
         body{
-            height: 1500px; /*sayfa scroll edilebilir hale getirildi*/
+            height: 1500px; /*sayfa scroll edilebilir hale getirildi
+        } */
+
+        .red{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            top: 20px;
+            left: 20px;
+            z-index: 1; /* blue div ve red divinin bir kısmı üst üste görünüyor. red divinin z-index değerine 1 vererek
+            red divi üste çıktı ve çakışan kısımda blue div altta kaldı. */
         }
+        .blue{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            left: 30px;
+            top: 10px;
+        }
+
     </style>
 </head>
 <body>
-    <div class="fixed-topbar">Udemy</div>
+
+    <div class="red"></div>
+     <div class="blue"></div>
+<!-- position relative divlerin bulundukları yere göre konumlandırılmasını sağlar. mesela burada red ve blue adında iki div oluşturduk.
+daha sonra ilk red divine position relative özelliğini verdikten sonra sonra top ve leftten 20px verdik ve bu div ilk bulunduğu yerden 20 px aşağı ve sağa kaydı. -->
+
+<!-- z-index : HTML öğeleri, bir sayfada birbiri üzerine binerek hizalandığında, bir öğenin diğerinin üzerinde veya altında görünmesini kontrol eder 
+ z-index: 1 değeri, normal düzene göre daha yüksek bir sıralamaya sahip bir öğeyi ifade eder. z-index değeri daha yüksek olan öğeler, daha düşük olanlardan üstte olur. Varsayılan z-index değeri 0'dır.-->
+
+    <!-- <div class="fixed-topbar">Udemy</div> -->
+
+
     <!-- Bir HTML öğresinin sayfa içinde nasıl yerleştirileceğini kontrol etmek için kullanılır. Dört farklı değer alır.
-    static :  Bu, öğenin varsayılan davranışıdır. Bu özelliğine sahip bir öğenin konumu, normal belge akışındaki yerine bağlıdır ve top, bottom, 
+    static :  Bu, öğenin varsayılan davranışıdır. Bu özelliğine sahip bir öğenin konumu, normal belge akışındaki yerine bağlıdır ve top, bottom,
     left veya right gibi özelliklere sahip değildir ve bu pozisyon özellikleri ile yer değiştirmez.
-    fixed : Bu, bir öğeyi belirli bir konuma sabitlemek için kullanılır. 
-    relative : 
+    fixed : Bu, bir öğeyi belirli bir konuma sabitlemek için kullanılır.
+    relative : Öğenin bulunduğu yere göre konumlandırılmasını sağlar.
     absolute : Bir HTML öğesinin normal belge akışından çıkarılarak, en yakın kapsaycı içinde konumlandırılmasını sağlar. Bu kapsayıcının position
     özelliği relative, absolute veya fixed olmalıdır. Eğer kapsayıcı bir öğe yoksa body etiketine göre konumlandırılır.
        -->
