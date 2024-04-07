@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+        /*örnek 1 :*/
+        .image1 {
+            width: 400px;
+            margin-right: 10px;
+            float: left; /* fotoğraf sol tarafa kaydırıldı ve yazı fotoğrafın yanındaki boşluktan başalayarak aşağı doğru devam etti.*/
+        }
+        /*örnek 2 */
+        .image2{
+            width: 200px;
+            float: left;
+        }
+        .image3{
+            width: 200px;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- float : bir öğenin normal akıştan çıkarılmasını ve belirtilen yönde (sağa veya sola) kaydırılmasını sağlar. Bu özellik genellikle öğelerin yan yana veya üst üste gelmesini sağlamak için kullanılır.-->
+    
+    <!-- örnek 1 : fotoğraf sol tarafa kaydırıldı ve yazı fotoğrafın yanındaki boşluktan başalayarak aşağı doğru devam etti. -->
+    <img src="images/image1.png" class="image1">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis similique quas vitae sunt maiores deserunt iure quos assumenda,
+        explicabo, illum ipsum voluptatum dolorem optio, dignissimos autem eius unde debitis deleniti cumque provident id. Possimus nam
+        architecto maxime, illo ipsam corporis neque temporibus asperiores maiores soluta excepturi repellat repellendus dolore quia sit eos
+        officiis ea quod harum quaerat consequuntur tenetur incidunt quasi illum? Adipisci necessitatibus ipsum hic at aliquid! Nisi quae nulla
+         rerum molestiae amet magnam, dolor ullam aliquid in consequuntur minima repellendus. Quidem ea voluptatum laboriosam dolorem fugit
+         ipsum quaerat! Repellat provident natus vero quae, laboriosam dolorem in sunt recusandae amet atque necessitatibus facilis. Porro ut
+         quidem nostrum explicabo provident assumenda voluptas maxime aperiam perspiciatis hic perferendis, voluptate ipsam, quasi asperiores,
+         eius blanditiis! Consectetur, ea minima eos sapiente quod molestias iure alias, laborum debitis error eligendi saepe labore, modi dolor
+          nostrum aliquam! Officia provident rem repudiandae fuga, et nam accusamus nihil dolores repellat maiores voluptatum earum error
+          commodi atque, magni nobis unde quos at. Nostrum, saepe distinctio. At aperiam natus hic, veniam, non asperiores cumque minima, fuga
+          reiciendis magnam quis repellat. Sunt tempore error necessitatibus quis voluptates dolor delectus voluptas veniam unde, eligendi
+          similique debitis voluptatibus et consequatur possimus omnis adipisci nostrum in repudiandae, perferendis nulla! Amet fugit quibusdam
+          tenetur, nostrum eligendi iusto. Distinctio quam facere ullam vero, eligendi iure. Dicta quibusdam reiciendis dolorum aspernatur nisi
+          vitae, quia eligendi. Iusto iste consequuntur nemo doloribus? Non, doloremque aspernatur. Asperiores error fugiat reprehenderit dolor
+          ab, sapiente aspernatur nulla aliquam, alias saepe quam possimus eos commodi? Enim, architecto! Fugiat eveniet, recusandae corrupti,
+          illum voluptatum adipisci alias, praesentium architecto commodi mollitia nobis impedit modi incidunt reprehenderit! Iusto hic magnam,
+          dolores explicabo voluptate quam in optio saepe id aperiam eligendi illum laudantium natus veniam. In, quidem nam ad qui accusamus ab?
+          Explicabo, quas facilis. Adipisci!</p>
+         
+          <hr>
+        <!-- örnek 2 :  iki resim ekleyip birini sağa birini sola yasladık. ardından bir metin ekledik ve metin fotoğrafların arasındaki boşluktan başlayarak aşağı doğru devam etti. 
+         metnin fotoğrafların arasından başlamadan direkt altından devam etmesini istiyorsak metinden önce <div style="clear: both;"></div> ekleyerek hem sol hem de sağa uygulanan float özelliğini kaldırmış oluruz 
+        eğer sadece sol tarafa float uygulanmış olsaydı clear:left yapılacaktı-->
+          <img src="images/image1.png" class="image2">
+          <img src="images/image1.png" class="image3">
+          <div style="clear: both;"></div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem labore reiciendis, fuga doloremque enim, facilis possimus autem accusantium libero non similique. Vitae corporis voluptas eligendi harum labore nam odit quia, porro unde cumque placeat accusamus impedit laudantium saepe! Sapiente libero eius incidunt quos? Nobis perspiciatis eveniet quo, sapiente eligendi error ad officiis? Perferendis quia deleniti iusto ut illum reiciendis earum quidem id, aliquam amet ad nihil impedit! Cumque, commodi delectus quam alias eligendi laborum. Doloremque a rem nostrum veniam? Eveniet quibusdam, praesentium quo similique provident quas soluta mollitia voluptates unde sapiente adipisci. Culpa earum, facere esse delectus voluptas velit unde!</p>
+          
+</body>
+</html>
