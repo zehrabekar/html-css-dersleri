@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .cnt1{
+            width: 60%;
+            margin: 0 auto;
+            display: flex;
+            height: 400px;
+            background: black;
+        }
+        .cnt2{
+            width: 60%;
+            margin: 0 auto;
+            display: flex;
+            justify-content:center;
+            height: 400px;
+            background: black;
+        }
+        .cnt3{
+            width: 60%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            height: 400px;
+            background: black;
+        }
+        .cnt4{
+            width: 60%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-start;
+            min-height: 400px;
+            background: black;
+            flex-wrap: wrap;
+        }
+        .cnt5{
+            width: 60%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 600px;
+            background: black;
+        }
+        .box2{
+            text-align: center;
+            background : #f2f2f2;
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+        .box1{
+            text-align: center;
+            background : #f2f2f2;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+        .box{
+            text-align: center;
+            background : #f2f2f2;
+            width: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container cnt1">
+
+        <!-- flexbox : bir container (konteyner) ve içindeki öğelerin (items) düzenini yönetmek için kullanılır. -->
+        <div class="box">
+            <h1>flex-direction</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>flex-direction</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>flex-direction</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <!-- 
+        container display flex özelliğini vermeden önce kutuları ilk oluşturduğumuzda alt alta sıralandı fakat flex özelliği ile yanyana sıralandı.
+        flex-direction özelliği default olarak row'dur , eğer sütun olarak sıralamak istersek flex-directio özelliği column olmalı   
+        -->
+    </div>
+
+    <hr>
+
+    <div class="container cnt2">
+        <!-- justify-content : bir flex container içindeki öğelerin, ana eksen (main axis) boyunca nasıl hizalanacağını belirler.
+        main axis flex direction özelliğine bağlıdır . eğer flex direction özelliği row ise öğeler soldan sağa yatayda sıralanır, column ise öğeler
+        sütunda yukarıdan aşağı hizalanır. 
+        default özelliği flex starttır
+        flex-start, flex-end, center, space-around, space-evenly, space between değerlerini alır-->
+        <div class="box">
+            <h1>justify-content</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>justify-content</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>justify-content</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>  
+    </div>
+
+    <hr>
+
+    <div class="container cnt3">
+        <!-- align-items : flex container içindeki öğelerin, çapraz eksen (cross axis) boyunca nasıl hizalanacağını belirler.
+        flex-start, flex-end, center,baseline,strech(container'ın boyutunu dolduracak şekilde uzatılır) değerlerini alır
+        default özelliği stretchdir-->
+        <div class="box">
+            <h1>align-items</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>align-items</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>align-items</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container cnt4">
+
+        <!-- flex wrap:flex container içindeki öğelerin bir satıra veya sütuna sığmaması durumunda nasıl davranacaklarını belirler.
+        nowrap(default), wrap, wrap-reverse değerlerini alır -->
+        <div class="box1">
+            <h1>flex-wrap</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box1">
+            <h1>flex-wrap</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box1">
+            <h1>flex-wrap</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box1">
+            <h1>flex-wrap</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box1">
+            <h1>flex-wrap</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box1">
+            <h1>flex-wrap</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box1">
+            <h1>flex-wrap</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box1">
+            <h1>flex-wrap</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box1">
+            <h1>flex-wrap</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box1">
+            <h1>flex-wrap</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box1">
+            <h1>flex-wrap</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box1">
+            <h1>flex-wrap</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box1">
+            <h1>flex-wrap</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container cnt5">
+        <div class="box2">
+            <h1>flex-direction</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box2">
+            <h1>flex-direction</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box2">
+            <h1>flex-direction</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <!-- flex-drection column olduğundan dikeyde sıralamk için justify content kullanacağız. yatayda sıralamak için de align items kullanabiliriz
+        burada main axis ne ise justfy content ona göre sıralar . yani burada columndan dolayı main axis y bu yüzden dikeyde sıralar, main axis x olsaydı yatayda sıralayacaktı-->
+    </div>
+
+</body>
+</html>
