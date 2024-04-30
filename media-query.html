@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design & Media Queries</title>
+    <style>
+        /* farklı ekran boyutlarında arkaplan renginin değişmesi :
+         body{
+            background: red;
+        }
+
+         tablet 
+        @media(max-width :768px)  {
+            body{
+                background: blue;
+            }
+        }
+
+         telefon 
+        @media(max-width:500px){
+            body{
+                background: green;
+            }
+        } */
+        /* geniş ekran ve 768px arası görünen , 768 pxden aşağı ekran boyutunda görünmeyen yazı :*/
+        .yazi{
+            display: none;
+        }
+        @media(min-width: 768px) {
+            .yazi{
+                display: block;
+            }
+        }
+
+        /* divlerin farklı ekran boyutlarında farklı genişliklere sahip olması : */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box{
+            border: 1px solid black;
+            background-color: #a7a7a7;
+            padding: 10px;
+            width: 25%;
+        }
+        /* tablet  */
+        @media(max-width :768px){
+            .box{
+                width: 50%;
+            }
+        }
+         /* telefon  */
+        @media(max-width: 500px){
+            .box{
+                width: 100%            }
+        }
+
+    </style>
+</head>
+<body>
+    <p class="yazi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, molestiae?</p>
+
+    <hr>
+
+    <div class="container">
+        <div class="box">
+            <h1>Article 1</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, aliquid.</p>
+        </div>
+        <div class="box">
+            <h1>Article 1</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, aliquid.</p>
+        </div>
+        <div class="box">
+            <h1>Article 1</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, aliquid.</p>
+        </div>
+        <div class="box">
+            <h1>Article 1</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, aliquid.</p>
+        </div>
+    </div>
+    <!-- responsive tasarımda width değerlerini px olarak değil de yüzde olarak verirsek ekran boyutu değişse bile yüzde sabit kalacağından orantılı büyüyüp küçülür -->
+
+    <!-- media query : Temel olarak, tarayıcı veya cihaz özelliklerine göre stil ve düzeni ayarlamak için kullanılır.
+    Media query'ler, @media kuralıyla başlar ve içerisine belirli koşullar sağlandığında uygulanacak CSS kodunu belirtir. 
+    Bu koşullar genellikle ekran boyutu, cihaz yönelimi, ekran çözünürlüğü gibi faktörlere dayanabilir.  
+    Örnek :
+    @media (max-width: 600px) {
+     /* 600 pikselden küçük ekranlar için bu stil uygulanır */
+    body {
+        background-color: lightblue;
+      }
+    }
+-->
+</body>
+</html>
