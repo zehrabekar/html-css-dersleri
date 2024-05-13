@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive - CSS Units</title>
+    <style>
+        /* ----- em ------- */
+        /* div{
+            font-size: 1.5em;
+        }
+        p{
+            font-size: 1.5em;
+        } */
+        /* burada body etiketinin font size değeri 16px . önce div için 1.5 em sonra p etiketi için 1.5em font size değeri verdik ve p etiketinin font size değeri 36px oldu */
+        
+        /* ----- rem ------- */
+        /* div{
+            font-size: 1.5em;
+        }
+        p{
+            font-size: 1.5rem;
+        }  */
+        /* burada font size değerine 1.5rem verdik ve p etiketinin font size değeri 24px oldu. dive uygulanan 1.5em'den etkilenmedi çünkü rem html 
+        etiketine göre boyutlandırma yapar */
+
+        /* div{
+            font-size: 1.5em;
+        }
+        p{
+            font-size: 1.5em;
+            padding: 1.5em;
+        }  */
+        /*  burada padding değeri 54px oldu .div etiketine göre değil p etiketinin font size değeri üzerinden boyutlandı.
+        burada html etiketinin font size değeri varsayılan olarak 16px geliyor
+        daha sonra biz divin font size özelliğine 1.5 em vererek divin font size değerini 24px yapıyoruz.
+        sonra p etiketinin font size değerine 1.5 em veriyoruz ve 36px oluyor.
+        sonra ise p etiketinin padding özelliğine 1.5 em veriyoruz ve p etiketinin font size değeri 36 px olduğu için padding değeri 1.5 katı olan 54px oluyor.
+        yan padding değeri div etiketinin font size değerine gre değil p etiketinin font size değerine göre boyutlanıyor.*/
+
+        /* ----- % ------- */
+        /* html{
+            font-size: 20px;
+        }
+        p{
+            font-size: 50%;
+        } */
+        /* html etiketinin font size değerinin yarısını alır */
+
+        /* -------vw,vh------- */
+        /* div{
+            width: 40vw;
+            tarayıcının genişliği 100vw'dir. 40vw yüzde 40ını kaplasın demektir 
+            height: 10vh;
+            background: #a7a7a7;
+        } */
+        /* sayfanın boyutu değişse bile div ekranda yukarıda belirtilen ölçüler kadar yer kaplayacak */
+
+        .background{
+            background: url("./background.jpg") center center no-repeat;
+            background-size: cover;
+            /* resmin tüm alanı kaplaması için */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10rem;
+            /* 160px */
+        }
+        h1{
+            margin-bottom: 1rem;
+            font-size: 3rem;
+        }
+        p{
+            font-size: 2rem;
+            letter-spacing: 2px;
+        }
+        @media(max-width : 500px){
+            h1{
+                margin-bottom: 0.5rem;
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <!-- em : -->
+    <!-- <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, consectetur.</p>
+    </div> -->
+
+    <!-- rem : -->
+    <!-- <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, consectetur.</p>
+    </div> -->
+
+    <!-- % -->
+    <!-- <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, consectetur.</p>
+    </div> -->
+
+    <div class="background">
+        <h1>welcome to the site</h1>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, dolor?
+        </p>
+    </div>
+
+
+    <!-- css birimler - em,rem,vw,vh %
+    em : parent elementin font size boyutuna göre oranlanır. örnek olarak sayfadaki bir divin font size değeri 16 px ise ve div içindeki p elementinin
+    font size özelliğine 1.5em verirsek, p elementinin font size değeri 24 px yani divin font size değerinin bir buçuk katı olur.
+
+    rem : html etiketinin font size değerine göre oranlanır.
+
+    % : parent öğenin boyutunun belirli bir yüzdesini temsil eder.
+
+    vw : Bu birim, viewport'un (tarayıcıda görünen tüm alan) genişliğine göre boyutlandırma yapmak için kullanılır.
+
+    vh : Bu birim, viewport'un yüksekliğine göre boyutlandırma yapmak için kullanılır.
+-->
+</body>
+</html>
